@@ -8,7 +8,7 @@ RUN useradd -m dotnetuser
 USER dotnetuser
 
 RUN dotnet tool install -g Cake.Tool
-ENV PATH="${PATH}:${HOME}/.dotnet/tools"
+ENV PATH="${PATH}:/home/dotnetuser/.dotnet/tools"
 
 #RUN dotnet cake build.cake --runtime=alpine-x64
 
