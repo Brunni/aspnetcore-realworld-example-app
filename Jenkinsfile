@@ -16,6 +16,7 @@ pipeline {
     stages {
         stage('Install') {
             steps {
+				sh 'echo $PATH'
                 sh 'dotnet cake build.cake -Target=Restore --exclusive'
             }
         }
