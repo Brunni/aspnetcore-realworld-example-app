@@ -1,5 +1,5 @@
 #build container
-FROM microsoft/dotnet:2.1.403-sdk-alpine as build
+FROM microsoft/dotnet:2.1.403-sdk-alpine
 
 #WORKDIR /build
 #COPY . .
