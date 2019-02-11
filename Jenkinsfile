@@ -7,7 +7,7 @@ pipeline {
 
     }
 	environment {
-		HOME = '/tmp'
+		// HOME = '/tmp'
 	} 
     options {
       buildDiscarder(logRotator(numToKeepStr: '10'))
