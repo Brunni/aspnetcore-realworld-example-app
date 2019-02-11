@@ -1,14 +1,14 @@
 #build container
-FROM microsoft/dotnet:2.2-sdk
+FROM microsoft/dotnet:2.2-sdk-alpine
 
 WORKDIR /build
 
 #COPY . .
 
 RUN dotnet tool install -g Cake.Tool
-ENV PATH="${PATH}:/root/.dotnet/tools"
+ENV PATH="$PATH:/root/.dotnet/tools"
 
-RUN chmod 777 /root/.dotnet
+#RUN chmod 777 /root/.dotnet
 
 #RUN dotnet cake build.cake --runtime=alpine-x64
 
