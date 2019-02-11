@@ -13,17 +13,17 @@ pipeline {
     stages {
         stage('Install') {
             steps {
-                sh './build.sh --target Restore --exclusive'
+                sh 'dotnet cake build.cake -Target=Restore --exclusive'
             }
         }
 		stage('Build') {
 			steps {
-				sh './build.sh --target Restore --exclusive'
+				sh 'dotnet cake build.cake -Target=Build --exclusive'
 			}
 		}
 		stage('Test') {
 			steps {
-				sh './build.sh --target Test --exclusive'
+				sh 'dotnet cake build.cake -Target=Test --exclusive'
 			}
 			post {
 				always {
@@ -33,7 +33,7 @@ pipeline {
 		}
 		stage('Publish') {
 			steps {
-				sh './build.sh --target Publish --exclusive'
+				sh 'dotnet cake build.cake -Target=Publish --exclusive'
 				zip(zipFile: 'publish.zip', dir: 'publish')
 				archiveArtifacts(artifacts: 'publish.zip', fingerprint: true)
 			}

@@ -3,7 +3,7 @@ FROM microsoft/dotnet:2.1.403-sdk-alpine as build
 
 #WORKDIR /build
 #COPY . .
-#RUN dotnet tool install -g Cake.Tool
+RUN dotnet tool install -g Cake.Tool
 #ENV PATH="${PATH}:/root/.dotnet/tools"
 #RUN dotnet cake build.cake --runtime=alpine-x64
 
