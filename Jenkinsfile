@@ -7,7 +7,7 @@ pipeline {
 
     }
 	environment {
-		HOME = '/build'
+		HOME = '/root'
 	} 
     options {
       buildDiscarder(logRotator(numToKeepStr: '10'))
