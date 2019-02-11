@@ -6,9 +6,9 @@ pipeline {
         }
 
     }
-	// environment {
-		// HOME = '/tmp'
-	// } 
+	environment {
+		HOME = '/build'
+	} 
     options {
       buildDiscarder(logRotator(numToKeepStr: '10'))
       timeout(time: 1, unit: 'HOURS')
