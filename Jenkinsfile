@@ -13,6 +13,7 @@ pipeline {
     stages {
         stage('Install') {
             steps {
+				sh 'ls -al'
                 sh './build.sh --target Restore --exclusive'
             }
         }
