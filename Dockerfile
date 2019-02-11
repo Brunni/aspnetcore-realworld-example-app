@@ -8,7 +8,6 @@ WORKDIR /build
 RUN dotnet tool install -g Cake.Tool
 ENV PATH="${PATH}:/root/.dotnet/tools"
 
-RUN mkdir /root/.dotnet
 RUN chmod 777 /root/.dotnet
 
 #RUN dotnet cake build.cake --runtime=alpine-x64
